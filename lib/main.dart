@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testgetxapp/controller/number_controller.dart';
+import 'package:testgetxapp/locale/message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      translations: Message(),
+      locale: const Locale('en','US'),
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -44,8 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              'hello'.tr,
             ),
             GetBuilder<NumberController>(
               builder: (controller) {
@@ -59,7 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => numberController.numberIncrement(),
+        onPressed: () => {
+          numberController.numberIncrement(),
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
