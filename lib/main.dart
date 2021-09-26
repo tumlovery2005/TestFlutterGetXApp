@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      translations: Message(),
       locale: const Locale('en','US'),
       title: 'Flutter Demo',
       theme: ThemeData(

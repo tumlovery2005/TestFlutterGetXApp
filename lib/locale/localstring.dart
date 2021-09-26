@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class Message extends Translations {
+class LocalString extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
     'en_US' : {
@@ -10,5 +10,4 @@ class Message extends Translations {
       'hello': 'สวัสดี',
     }
   };
-
 }
