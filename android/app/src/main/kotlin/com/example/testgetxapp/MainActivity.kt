@@ -1,4 +1,4 @@
-package com.example.tarkingapp
+package com.example.testgetxapp
 
 import io.flutter.embedding.android.FlutterActivity
 
