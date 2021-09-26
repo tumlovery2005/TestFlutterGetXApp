@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testgetxapp/controller/number_controller.dart';
-import 'package:testgetxapp/locale/message.dart';
+import 'package:testgetxapp/locale/localstring.dart';
 
 void main() {
   runApp(const MyApp());
