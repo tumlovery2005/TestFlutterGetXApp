@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testgetxapp/controller/number_controller.dart';
 import 'package:testgetxapp/locale/localstring.dart';
+import 'package:testgetxapp/page/secondpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -64,6 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => {
           numberController.numberIncrement(),
+          // numberController.changeLanguage(),
+          Get.to(SecondPage()),
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
